@@ -1,0 +1,7 @@
+# Extention module
+
+## What is extention module?
+
+## Create init-script
+
+## Write the module

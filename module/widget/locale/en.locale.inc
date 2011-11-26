@@ -1,0 +1,27 @@
+<?php
+globalvar_add_locale(array (
+	'title' => '',
+	'appear by module' => '',
+	'Check none to allow Widget appeared everywhere.' => '',
+	'Above option (appear by module) is deactivated.' => '',
+	'Only Ximple URI e.g. blog/111 is allowed.' => '',
+	'Use comma to separate multiple URIs.' => '',
+	'appear by URI' => '',
+	'appear by group' => '',
+	'custom text' => '',
+	'Widget' => '',
+	'Control Panel is not allowed to disable. Its position is not updated.' => '',
+	'It is not a good idea to disable Navigation Widget.' => '',
+	'Widgets sort and position setting has been updated.' => '',
+	'Add a new Widget to %s' => '',
+	'Edit Widget' => '',
+	'Widget Edit' => '',
+	'Legend' => '',
+	'Sort and select position by drag-and-drop' => '',
+	'Edit and Configure Widget' => '',
+	'Drop Widget (Widget can be rebuilt by refreshing module)' => '',
+	'You can use this form to sort and set widgets position by drag-and-drop. Please, do not forget to click submit.' => '',
+	'Add new widget into %s' => '',
+	'save widgets' => '',
+));
+?>

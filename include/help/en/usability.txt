@@ -1,0 +1,22 @@
+# Ximple Usability
+
+## What is usability?
+
+## Give the user information
+
+### Where am I?
+
+### What can I do with it?
+
+### Is my operation successful?
+
+### What should I do next?
+
+## Too much information is no information.
+
+## Show user the way with default.
+
+## Less is more.
+
+## Hide options like "can but not must".
+

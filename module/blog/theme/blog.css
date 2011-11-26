@@ -1,0 +1,20 @@
+p.blog_info{
+	color:gray;
+	font-size:11px;
+	margin-bottom:-5px;
+}
+
+.blog_sibling{
+	margin:20px;
+	text-align:center;
+}
+
+.blog{
+	margin:0px 0px 50px 0px;
+}
+
+.promoted_blog_activated{
+	padding:3px;
+	background:#9af;
+	text-decoration:none;
+}

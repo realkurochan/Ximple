@@ -1,0 +1,18 @@
+# Primitive Module
+
+## What is primitive module?
+
+## Flash steps
+
+- give module a name
+- create directory
+- create init-script
+- write the module
+
+## Give module a name
+
+## Create directory
+
+## Create init-script
+
+## Write the module

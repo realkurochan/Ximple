@@ -1,0 +1,35 @@
+.theme_head{
+	margin:15px;
+	background:#bbb;
+	padding:5px;
+	border-top:2px solid #729bd3;
+}
+
+.theme_head h4{
+	font-size:14px;
+	font-weight:bold;
+	padding-top:5px;
+	margin:0;
+	color:white;
+}
+
+.theme_head a{
+	font-size:10px;
+	color:white;
+}
+
+.select_theme, .current_theme{
+	padding:15px;
+}
+
+.current_theme{
+	background:#eee;
+	border:1px solid #729bd3;
+	-moz-border-radius: 8px;
+	border-radius:8px;
+}
+
+.theme_preview_image{
+	width:150px;
+}
+

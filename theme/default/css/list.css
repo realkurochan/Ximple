@@ -1,0 +1,59 @@
+.list table{
+	border:1px solid #ccc;
+	margin:20px 0px 20px 0px;
+	border-collapse:collapse;
+}
+
+.list tr{
+	height:40px;
+}
+
+.list td{
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding:10px;
+	font-size:12px;
+}
+
+.list img{
+	padding-right:10px;
+}
+
+.list th{
+	border-right:1px solid #ccc;
+	text-align:center;
+	font-size:12px;
+}
+
+.list tr:hover{
+	background:#d7e3f4;
+}
+
+.list a{
+	color:#444;
+}
+
+.list th a{
+	text-decoration:none;
+}
+
+.list_select{
+	width:300px;
+}
+
+.search_form input, .search_form select{
+	margin-right:20px;
+}
+
+.list p{
+	padding:5px;
+	margin:2px;
+}
+
+#selected_sort{
+	border:2px solid #ccc;
+}
+
+td.option a{
+	text-decoration:none;
+}

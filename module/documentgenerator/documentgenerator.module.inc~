@@ -1,0 +1,13 @@
+<?php
+execute_add_function('documentgenerator');
+
+function documentgenerator(){
+	document_set_path(tt('Document Generator'));
+	$internaldocument = db_select('documentgenerator_internaldocument' , array('id', 'subject'), 'WHERE owner='.USER_ID);
+	$render_array = array(
+		'internaldocument' => $internaldocument,
+	);
+	
+	return render($render_array, 'documentgenerator.tpl', 'documentgenerator');
+}
+?>

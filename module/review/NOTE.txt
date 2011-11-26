@@ -1,0 +1,82 @@
+- สำหรับการใช้งานที่กว้างขึ้น เปลี่ยน rewiewee (owner) เป็น reviewee_mode + reviewee_id
+- List = Overview => ให้ข้อมูลเท่าที่จำเป็น ที่เหลือค่อยคลิกเข้าไปดู
+- Convention : precedure, OOP, SQL, css, HTML, JavaScript
+- ใช้ QuickTableCreator ช่วยสร้างตาราง
+- ต้องเลือก reviewee_mode + reviewee_id ก่อนเขียน review => เปิดเป็น option เอาไว้
+- CRUD based user interface(R = Read => for whom, for what, overview then detail)
+- Control Panel : list for reviewer, list for admin, (event.) configuration
+- Reviewee list => ให้เป็นหน้าที่ของโมดูลที่เรียกใช้
+- วิธีการคิดคือ "หาเราเป็นคนใช้งาน เราจะคาดหวังอะไร"
+- คนใช้งานคือใคร (averaged user, super user)
+- ฟังก์ชั่นหรือเมธอดที่มีขนาดยาวเกินไปควรหั่นเป็นฟังก์ชั่นเล็ก ๆ หลาย ๆ ฟังก์ชั่น
+- การส่งข้อมูลผ่าน $_GET ควรจะสั้นที่สุด
+
+Old Code
+========
+
+	public function revieweeList(){
+#		print_r($this->owner);
+#		$selectClause = ' inner join review_rating on review.id = review_rating.reviewId WHERE section='.SECTION." AND reviewee='".gg('id')."'".' ORDER BY CREATEDATE DESC';
+#		$pageLength = 10
+#		$this->selectPage(array('review.id', 'review.reviewer', 'review.star','review.createdate', 'review.description','review_rating.point'), $pageLength,$selectClause);
+		$selectClause = "WHERE scorer='".USER_ID."'".' ORDER BY reviewId DESC';
+		$rating = db_select('review_rating',array('reviewId'),$selectClause);
+		$ratingcount = count($rating);
+#		print_r($rating);
+		$selectClause = 'WHERE section='.SECTION." AND reviewee='".gg('id')."'".' ORDER BY CREATEDATE DESC';
+		$this->data = db_select('review',array('id', 'reviewer', 'star','createdate', 'description', 'point1', 'point2'),$selectClause);
+		$total = 0;
+		$count = 0;
+		$listId = "";
+		$ratingId = 0;
+		$reviewRatingId = $rating[$ratingId]['reviewId'];
+		$renderData = array();
+		foreach($this->data as $key => $value){
+			$all = ($value['point1'] + $value['point2']);
+			$total = $total + ($value['star'] * ($value['point1'] / $all));
+			$count++;
+			//default not found rating
+			if (USER_ID == $value['reviewer']){
+				$canReview = false;
+			}else{
+				$canReview = true;
+			}
+			
+			while (($value['id'] <= $reviewRatingId) && ($ratingId < $ratingcount)){
+				$reviewRatingId = $rating[$ratingId]['reviewId'];
+				if ($value['id'] == $reviewRatingId){
+					//already rating
+					$canReview = false;
+					break;
+				}
+				$ratingId++;
+			}
+			$row = array(
+				'id' => $value['id'],
+				'reviewer' => $value['reviewer'],
+				'reviewerLink' => render_profile_link(userinfo_get_info_by_id($value['reviewer'])),
+				'star' => $value['star'],
+				'createdate' => $value['createdate'],
+				'description' => $value['description'],
+				'point1' => $value['point1'],
+				'point2' => $value['point2'],
+				'canReview' => $canReview
+			);
+			$renderData[] = $row;
+		}
+		if ($count == 0){
+			$total = 0;
+		}else{
+			$total = $total/$count;
+		}
+		$reviewee = userinfo_get_info_by_id(gg('id'));
+		$renderArray = array(
+			'reviewer' => USER_ID,
+			'reviewee' => gg('id'),
+			'reviewee_name' => $reviewee['login_name'],
+			'total' => $total,
+			'review_data' => $renderData,
+		);
+		$page = render($renderArray, 'revieweedisplay.tpl', 'show_faq');
+		return $page;
+	}

@@ -1,0 +1,13 @@
+<h1>Structure of Announce Document</h1>
+<p>ส่วนราชการ&nbsp&nbsp:&nbsp&nbsp<?=$government_fraction?></p>
+<p>ที่&nbsp&nbsp:&nbsp&nbsp<?=$at?></p>
+<p>เดือน/ปี&nbsp&nbsp:&nbsp&nbsp<?=$date?></p>
+<p>เรื่อง&nbsp&nbsp:&nbsp&nbsp<?=$subject?></p>
+<p>คำขึ้นต้น&nbsp&nbsp:&nbsp&nbsp<?=$introduction?></p>
+<p><?=$introduction?>&nbsp&nbsp:&nbsp&nbsp<?=$introduction_detail?></p>
+<p>ข้อความ&nbsp&nbsp:&nbsp&nbsp<?=$detail?></p>
+<p>คำลงท้าย&nbsp&nbsp:&nbsp&nbsp<?=$postscript?></p>
+<p>ยศ&nbsp&nbsp:&nbsp&nbsp<?=$rank?></p>
+<p>ชื่อ&nbsp&nbsp:&nbsp&nbsp<?=$name?></p>
+<p>สกุล&nbsp&nbsp:&nbsp&nbsp<?=$surname?></p>
+<p>ตำแหน่ง&nbsp&nbsp:&nbsp&nbsp<?=$position?></p>

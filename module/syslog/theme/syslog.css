@@ -1,0 +1,59 @@
+#syslog_table{
+	border:1px solid #aaa;
+	color:#444;
+}
+
+#syslog_table a, #syslog_legend a{
+	color:#66a;
+}
+
+#syslog_table tr td{
+	border-top:1px solid #aaa;
+	border-right:1px solid #aaa;
+}
+
+#syslog_table tr th{
+	border-right:1px solid #aaa;
+}
+
+.log_group li{
+	line-height:25px;
+	float:left;
+	width:100px;
+	margin:5px 15px 15px 5px;
+	padding-left:5px;
+}
+
+.syslog_not_found{
+	background:#ffe;
+}
+
+.syslog_fatal, .syslog_system, syslog_db_connect{
+	background:#fee;
+}
+
+.syslog_denied{
+	background:#fbb;
+}
+
+.syslog_fail_login{
+	background:#f66;
+	color:white;
+}
+
+.syslog_fail_login:hover{
+	color:#444;
+}
+
+.syslog_captcha{
+	background:#ff8;
+}
+
+.syslog_captcha:hover{
+	color:#444;
+}
+
+.syslog_notify_warning, .syslog_notify_error{
+	background:#eef;
+}
+

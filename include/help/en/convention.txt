@@ -1,0 +1,119 @@
+# Coding Convention
+
+This document is a guideline for coding in Ximple. Coding convention is not a "must",
+but it can help us to communicate with each other via our code without saying something.
+
+## Function
+
+- Nothing between function with array and OOP is preferred.
+- Use function with array, if function should be simply changed and array structure should not be changed.
+- Function name : component_verb_and_so_on() > component_adjective() > component()
+  excepted functions in include/tool/globalvar.tool.inc .
+- Preferred verb for function name : get, set, add, is, exist, check (control w/o return), add
+  insert (database task), update (database task), drop, handle, render, init, process.
+- One function one task.
+- Function should be small as possible.
+- A function with more than 50 lines of code is taboo.
+- Number of function parameters should be small as possible.
+- Call by reference function parameters should be avoided.
+- In a file, high level functions should be at the beginning of a file.
+- If you have more than 3 level nesting brace block (something like {{{...}}}) in a function,
+  decompose the function to multiple functions.
+
+## OOP
+
+- Nothing between OOP and functions with array is preferred.
+- Use OOP, if method should not be changed and data structure should be simply changed.
+- Use OOP, if you need inheritance.
+- Interface is very useful in static language, because you can call the method without
+  knowing the class or implementation of the object. But in dynamic language, it is somehow useless,
+  because you can pass the object without giving its class (a class is automatically an interface).
+- A class with  more than 500 lines of code is taboo.
+- Name in OOP : ClassName, methodName, attributeName, objectName.
+- Excepted methodName, all conventions for function are also for methods.
+- If you need both setter and getter methods, make attribute public.
+
+## SQL
+
+- Be careful using SQL with data from users.
+- Use only the basic SQL-syntax.
+
+## Comment
+
+- For doxygen, "///" is used for the comment.
+- Comments inside the function should be avoided, because function should be small.
+- But at the beginning of all functions, comments are appreciated. 
+
+## Template
+
+- Write "<?php if(!defined('XIMPLE_CMS')) die();?>" at the beginning of template to avoid direct access.
+- Use <?=$variable?> in template to printout something.
+- In a template foreach, for, while, if statements are allowed and for function, only tt() is allowed.
+
+## File Including
+
+- Include file : include > require > include_once > require_once.
+- If files are in the same directory use include('filename'), else include(ROOT_PATH.'dir/file').
+- Include it, only if you want it.
+
+## Global Variables
+
+- If possible, use constant instead of global variables.
+- Global variables are allowed to be used only inside a file.
+- Global variables like $_POST, $_GET, $_SESSION, $_FILE, $GLOBALS should not
+  directly be accessed used functions in include/tool/globalvar.tool.inc instead.
+
+## Formatting
+
+- Small but many and structured is appreciated (divide and conquer).
+- A file with over 500 lines of code is taboo.
+- A line with over 120 characters is taboo (excepted template file).
+- Use a tab with 4 characters width as indentation.
+- Brace block and indentation:
+<pre>
+function component_do_something(){
+	if(...){
+		foreach(...){
+			...
+		}
+	}else{
+		...
+	}
+}
+</pre>
+
+- Function call and declaration component_do_something($param1, $param2, $param3)
+  (attend on free space and comma).
+- Function declaration with default parameters : component($param1, $param2=null)
+  (attend on free space and comma).
+- Variable assignment : $variable = component_do_something(); (attend on free space).
+- Array declaration $var = array('value1', 'value2', 'key' => 'value3'); or
+<pre>
+$var = array(
+	'value1',
+	'value2',
+	'key' => 'value3',
+);
+</pre>
+
+- Loop-statement : foreach > for > while.
+- Single quote is preferred over double quote.
+- String concatenation is preferred over "string $variable string" and sprintf.
+- Statement "switch" should not be used.
+- One-line if-statement is allowed.
+- For multiple-lines if-statement
+<pre>
+if(){
+	...
+}else{
+	...
+}
+</pre>
+- In-line and multiple-lines if-statement should not be mixed.
+- Boolean operation and, or are preferred over &&, ||.
+
+
+## Misc
+
+- JavaScript function name : functionName().
+- CSS, HTML id and class name : task_verb_and_so_on.

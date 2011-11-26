@@ -1,0 +1,23 @@
+.comment_trunk{
+	padding-left:15px;
+	border-left:2px solid #bbb;
+}
+
+.comment_branch{
+	margin-left:10px;
+	padding-left:15px;
+	border-left:2px solid #bbb;
+}
+
+.comment{
+	margin:0px 0px 50px 0px;
+}
+
+.comment_signature{
+	font-size:11px;
+	color:#666;
+}
+
+.new_comment_label{
+	color:#f70;
+}

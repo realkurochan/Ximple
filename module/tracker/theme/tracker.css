@@ -1,0 +1,36 @@
+#tracker_table{
+	color:#444;
+}
+
+#tracker_table a, #tracker_legend a{
+	color:#66a;
+}
+
+.tracker_group li{
+	line-height:25px;
+	float:left;
+	width:100px;
+	margin:5px 15px 15px 5px;
+	padding-left:5px;
+}
+
+.tracker_update{
+	background:#ffc;
+}
+
+.tracker_write{
+	background:#def;
+}
+
+.tracker_drop{
+	background:#fee;
+}
+
+.tracker_comment{
+	background:#fec;
+}
+
+.tracker_read{
+	background:#efe;
+}
+

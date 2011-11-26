@@ -1,0 +1,9 @@
+.direct_link{
+	display:none;
+}
+
+ul.banner_list{
+	list-style:none;
+	padding:0;
+	margin:10px auto;
+}

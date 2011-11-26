@@ -1,0 +1,23 @@
+# Ximple Theme
+
+## Concept
+
+## Flash steps
+
+- give theme a name
+- create directory
+- create init-script
+- write the theme
+
+## Give theme a name
+
+## Create directory
+
+## Create init-script
+
+## Write the theme
+
+## Using XAT (Ximple Automatic Theme-Creator)
+
+## Internationalization
+

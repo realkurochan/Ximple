@@ -1,0 +1,27 @@
+<?php
+globalvar_add_locale(array (
+	'question' => '',
+	'draft' => '',
+	'publish' => '',
+	'status' => '',
+	'answer' => '',
+	'FAQ' => '',
+	'Disable' => '',
+	'List of FAQ in Section' => '',
+	'List of My FAQ' => '',
+	'Write new Question & Answer' => '',
+	'Frequency Asked Question. An introduction to Ximple can be discover here.' => '',
+	'FAQ has been successfully activated' => '',
+	'FAQ has been successfully deactivated' => '',
+	'FAQ Category : ' => '',
+	'Please, select category' => '',
+	'All categories' => '',
+	'Rearrange FAQ' => '',
+	'Legend' => '',
+	'Sort and select category by drag-and-drop' => '',
+	'Edit FAQ' => '',
+	'Drop FAQ' => '',
+	'You can use this form to sort and set FAQ arrangement by drag-and-drop. Please, do not forget to click submit.' => '',
+	'save FAQ arrage' => '',
+));
+?>

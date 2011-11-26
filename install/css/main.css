@@ -1,0 +1,197 @@
+html{
+	height:100%;
+}
+
+body {
+	font-size:12px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-family:Tahoma;
+}
+
+a{
+	color:#666;
+}
+
+h2, h3{
+	margin-top:0px;
+}
+
+pre{
+	width:100%;
+	height:250px;
+	overflow-y:scroll;
+}
+
+label{
+	display:block;
+	font-weight:bold;
+	font-size:12px;
+	margin-bottom:5px;
+}
+
+input{
+	margin-bottom:10px;
+}
+
+.form h3{
+	margin-top:15px;
+}
+
+
+#main_container{
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+}
+
+#main{
+	width:720px;
+	position: relative;
+	margin: 20px auto 0px auto;
+	text-align:left;
+	background:white;
+	text-align:left;
+}
+
+#main h2{
+	color:#666;
+	font-size:18px;
+}
+
+#personal_bar{
+	background:#444;
+	font-size:12px;
+	height:22px;
+	padding:5px 15px 5px 0px;
+	margin:0;
+	border:1px solid #444;
+	text-align:right;
+	font-weight:bold;
+	color:white;
+	min-width:1200px;
+}
+
+#head{
+	height:140px;
+	width:100%;
+	margin:0;
+	padding:0;
+	background: #729bd3 url(../image/head.png) top left no-repeat;
+	border-top:2px solid #729bd3;
+	border-bottom:2px solid #bbb;
+	text-align:left;
+	min-width:1200px;
+}
+
+#install_label{
+	display:inline;
+	float:left;
+}
+
+#install_label a{
+	text-decoration:none;
+}
+
+#install_label h1{
+	padding:8px 0px 0px 180px;
+	color:white;
+	font-size:24px;
+	text-decoration:none;
+}
+
+#install_icons{
+	display:inline;
+	float:right;
+	padding-top:10px;
+	margin-right:20px;
+}
+#install_icons p{
+	font-size:13px;
+	font-weight:bold;
+	color:white;
+}
+
+#install_icons td{
+	width:70px;
+	height:80px;
+}
+
+#install_icons h1{
+	padding:0;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#install_icons a{
+	color:white;
+	text-decoration:none;
+}
+
+td.enable_step{
+	padding-left:5px;
+	padding-right:5px;
+	font-size:10px;
+}
+
+td.unable_step{
+	padding-left:5px;
+	padding-right:5px;
+	color:#666;
+	font-size:10px;
+}
+
+td.selected{
+	padding-left:5px;
+	padding-right:5px;
+	height:70px;
+	background:url(../image/iconframe.png) no-repeat;
+	color:white;
+	font-size:10px;
+}
+
+#body{
+	height:auto;
+	margin:5px 6px 0px 6px;
+}
+
+#content{
+	width:100%;
+	margin-top: 0px;
+	padding-top: 0px;
+	float:right;
+	border:1px solid white;
+	padding-bottom:20px;
+	line-height:1.8em;
+}
+
+#foot{
+	clear:both;
+	border-top:6px solid #729bd3;
+	text-align:center;
+	height:50px;
+	padding-top:20px;
+	font-weight:bold;
+	color:#333;
+}
+
+#foot a{
+	color:#333;
+}
+
+.valid{
+	color:green;
+}
+
+.invalid{
+	color:red;
+}
+
+.help_text{
+	font-size:11px;
+	color:gray;
+	margin:0px 10px 15px 25px;
+	padding:0;
+}

@@ -1,0 +1,75 @@
+<?php
+class ExternalDocumentModel extends Model{
+	function ExternalDocumentModel(){
+		$this->owner = $this->owner();
+		$this->sort_number = $this->hidden(0, 'int');
+		
+		$this->at = $this->title(tt('ที่'));
+		$this->at->isList = false;
+		
+		$this->government_owner = $this->title(tt('ส่วนราชการเจ้าของเรื่อง'));
+		$this->government_owner->isList = false;
+		
+		$this->address = $this->title(tt('ที่ตั้งและรหัสไปรษณีย์'));
+		$this->address->isList = false;
+		
+		$this->month = $this->title(tt('เดือน'));
+		$this->month->isList = false;
+		
+		$this->year = $this->title(tt('ปี'));
+		$this->year->isList = false;
+		
+		$this->subject = $this->title(tt('เรื่อง'));
+		$this->subject->listMode = 'documentgenerator_externaldocument';
+		
+		$this->introduction = $this->title(tt('คำขึ้นต้น'));
+		$this->introduction->isList = false;
+		
+		$this->introduction_detail = $this->title(tt('(เรียน/เสนอ) ถึง'));
+		$this->introduction_detail->isList = false;
+		
+		$this->refer = $this->title(tt('อ้างถึง'));
+		$this->refer->isList = false;
+		
+		$this->enclose = $this->title(tt('สิ่งที่ส่งมาด้วย'));
+		$this->enclose->isList = false;
+		
+		$this->detail = $this->plain(tt('ข้อความ'));
+		$this->detail->isList = false;
+		
+		$this->postscript = $this->title(tt('คำลงท้าย'));
+		$this->postscript->isList = false;
+		
+		$this->rank = $this->title(tt('ยศ'));
+		$this->rank->isList = false;
+		
+		$this->name = $this->title(tt('ชื่อ'));
+		$this->name->isList = false;
+		
+		$this->surname = $this->title(tt('สกุล'));
+		$this->surname->isList = false;
+		
+		$this->position = $this->title(tt('ตำแหน่ง'));
+		$this->position->isList = false;
+		
+		$this->government_fraction = $this->title(tt('ส่วนราชการ'));
+		$this->government_fraction->isList = false;
+		
+		$this->tel = $this->title(tt('โทรศัพท์'));
+		$this->tel->isList = false;
+		
+		$this->fax = $this->title(tt('โทรสาร'));
+		$this->fax->isList = false;
+		
+		$this->category = $this->category('externaldocument');
+		
+		$option = array(
+			0 => tt('draft'),
+			1 => tt('publish'),
+		);
+		$this->status = $this->select(tt('status'), $option);
+		
+		$this->section = $this->section();
+	}
+}
+?>

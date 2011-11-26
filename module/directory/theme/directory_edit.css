@@ -1,0 +1,14 @@
+.directory_element{
+	border:1px solid #490;
+	width:100%;
+}
+
+.directory_element_label{
+	margin-top:10px;
+	margin-bottom:0;
+	padding-left:15px;
+	font-weight:bold;
+	background:#490;
+	color:white;
+	width:200px;
+}

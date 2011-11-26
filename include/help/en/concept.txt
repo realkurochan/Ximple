@@ -1,0 +1,63 @@
+# Ximple Development Concept
+
+## LAMP Stack
+
+Personally, I don't like PHP as a programming language. It seems to be a work-around
+language and nothing was planed. However, the deployment of LAMP (Linux + Apache Web-Server
++ MySQL + PHP or Python or Perl) with PHP is incredible. LAMP is free, open-source,
+highly scalable, fast, easy to deploy and you can find web hosting for LAMP everywhere.
+LAMP with PHP becomes a quasi standard for the web technology.
+If your software is written in PHP, it is quire sure, that you do not have problem
+with the deployment. Hence, the most CMS softwares are implemented in PHP.
+Furthermore, with PHP5, the modern design concept can be smoothly applied.
+Nevertheless, more and more I find PHP has become sexier.
+
+## Reinvent the wheel?
+
+Everyone, who knows something about content management system (CMS), feels perhaps boring
+with "Yet another CMS". There are so many or too many CMS in the world. Most of them are free
+and open-source, many of them are very powerful, many of them are user friendly, many of
+the are extreme extensible and many of them are fast. However, in the time I need a CMS,
+any of them can fulfill my requirements. Although, my requirements are so simple.
+This is, why I begin to develop a simple CMS to fulfill my simple requirements.
+
+## Simple for everyone
+
+A simple software is not simple to be implemented. Basically, you have the
+followed trade-offs.
+
+- Simple for beginner vs. powerful for complex task.
+- Simple development customization vs. flexible customization.
+- Developer friendly vs. user friendly.
+- Features vs. usability.
+- Features vs. performance.
+
+We try to solved these problems with the followed concepts :
+
+### Unity and minimal user-interface
+
+### Adaptive user-interface
+
+### Hint for users
+
+### Battery included
+
+### Default based development and theme design
+
+### Clean and modern code
+
+### There is only one way to do it
+
+### Minimal
+
+### Performance by design
+
+### Priority
+
+- security
+- clean code and concept
+- performance
+- usability
+- clean look and feel
+- features
+

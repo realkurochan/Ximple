@@ -1,0 +1,29 @@
+.activity_time_span{
+	background:url(calendar.png) no-repeat;
+	padding-left:25px;
+}
+
+.activity_time_span label{
+	font-weight:bold;
+}
+
+.activity_info{
+	color:gray;
+	font-size:11px;
+	margin-bottom:-5px;
+}
+
+.activity_sibling{
+	margin:20px;
+	text-align:center;
+}
+
+.activity{
+	margin:0px 0px 50px 0px;
+}
+
+/*====== Calendar ======*/
+.active_activity{
+	background:#ddd;
+	border-bottom:3px solid #800;
+}

@@ -1,0 +1,20 @@
+<?php
+execute_add_extended_class('documentgenerator', 'internaldocument', 'InternalDocument');
+include_once('DocumentGenerator.class.inc');
+include('InternalDocumentModel.class.inc');
+
+class InternalDocument extends DocumentGenerator{
+	function InternalDocument(){
+		$this->moduleTitle = tt('InternalDocument');
+		$this->moduleName = 'documentgenerator';
+		$this->moduleExtension = 'internaldocument';
+		$this->tableName = 'documentgenerator_internaldocument';
+		$this->listLabel = tt('List of My InternalDocument');
+		$this->init(new InternalDocumentModel());
+		$this->setAccess();
+		$this->setAction();
+		document_set_path(tt('Document Generator'), $this->moduleName);
+		document_set_path($this->moduleTitle, $this->fullModuleName);
+	}
+}
+?>

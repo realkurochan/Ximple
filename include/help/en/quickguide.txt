@@ -1,0 +1,47 @@
+# Ximple Quick-Guide
+
+## Installation
+
+- Get a host
+- Upload Ximple
+- Write setup.php
+- Execute installation
+
+### Get a host
+
+- Apache
+- PHP newer than version 5.3
+- MySQL or PostgreSQL or SQLite
+- It should be great, if it has mod_rewrite (http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html).
+
+### Upload Ximple
+
+### Write setup.php
+
+### Execute installation
+
+## Create categories
+
+## Write contents
+
+## Select a new theme
+
+## Build your site with block and menu
+
+## Recommendation about a Web
+
+### Keep Clear
+
+### Less is more
+
+### Friendly
+
+### Content! content! content!
+
+## Add more modules
+
+## Configure your site
+
+## User, group and role
+
+## Get a update by XUM (Ximple Update Manager)

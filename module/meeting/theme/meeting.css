@@ -1,0 +1,29 @@
+.meeting_time_span{
+	background:url(calendar.png) no-repeat;
+	padding-left:25px;
+}
+
+.meeting_time_span label{
+	font-weight:bold;
+}
+
+.meeting_info{
+	color:gray;
+	font-size:11px;
+	margin-bottom:-5px;
+}
+
+.meeting_sibling{
+	margin:20px;
+	text-align:center;
+}
+
+.meeting{
+	margin:0px 0px 50px 0px;
+}
+
+/*====== Calendar ======*/
+.active_meeting{
+	background:#ddd;
+	border-bottom:3px solid #080;
+}

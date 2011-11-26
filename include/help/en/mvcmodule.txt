@@ -1,0 +1,91 @@
+# MVC-Module
+
+## Ximple MVC
+
+## Flash steps
+
+- give module a name
+- create directory
+- create Model
+- create Control
+- create init-script
+- develop Control and View
+
+## Give module a name
+
+## Create directory
+
+## Create Model
+
+## Create Control
+
+execute_add_class('block', 'Block');
+
+$this->tableName = 'faq';
+
+include('FaqModel.class.inc');
+
+$this->init(new FaqModel());
+
+
+## Create init-script
+
+### Initialize the module
+
+### Add the module requirement
+
+### Add and describe access role
+
+### Add control panel
+
+
+
+## Develop Control and View
+
+### Know the Ximple URI-system
+
+### Base configuration
+
+$this->moduleName = 'faq';
+
+### Actions design
+
+The followed actions have been already in Control-Class implemented.
+
+$this->addAction($this->moduleName, 'index');
+$this->addAction($this->moduleName.'_list', 'listPage');
+$this->addAction($this->moduleName.'_write', 'write');
+$this->addAction($this->moduleName.'_edit', 'edit');
+$this->addAction($this->moduleName.'_insert', 'insert');
+$this->addAction($this->moduleName.'_update', 'update');
+$this->addAction($this->moduleName.'_drop', 'drop');
+$this->addAction($this->moduleName.'_config', 'configPage');
+$this->addAction($this->moduleName.'_config_save', 'configSave');
+
+
+$this->addAction('faq_question', 'getQuestion');
+
+### Permission design
+
+The Ximple security concept is "Nobody gets any permission by default".
+
+$this->ownerColumn = 'writer';
+
+$this->addAccessMethod('faq_writer', 'write');
+$this->addAccessMethod('faq_moderator', 'write');
+$this->addAccessMethod('faq_admin', 'write');
+
+### Get data
+
+### Render pages
+
+### Difference between theme and systemtheme
+
+### Render forms
+
+### Module configuration
+
+## Internationalization with XIT (Ximple Internalization Tool)
+
+## Using XAM (Ximple Automatic Module-Creator)
+

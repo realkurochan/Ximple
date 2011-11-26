@@ -1,0 +1,47 @@
+.note_item_even{
+	margin-bottom:30px;
+	margin-left:20px;
+	width:454px;
+	padding:0;
+}
+
+
+.note_item_odd{
+	margin-bottom:30px;
+	margin-left:220px;
+	width:454px;
+	padding:0;
+}
+
+
+.note_head{
+	width:337px;
+	height:40px;
+	background:url(note_head.png) no-repeat;
+	padding:0;
+}
+
+.note_container{
+	width:337px;
+	min-height:150px;
+	background:url(note_body.png) repeat-y;
+	padding:0;
+	text-align:left;
+}
+
+.note_body{
+	width:300px;
+	margin-left:20px;
+}
+
+.note_body p{
+	margin:0;
+	padding:0;
+}
+
+.note_foot{
+	width:337px;
+	background:url(note_foot.png) no-repeat;
+	text-align:center;
+	height:50px;
+}

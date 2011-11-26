@@ -1,0 +1,41 @@
+.profile h4{
+	padding:5px 0px 5px 0px;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:underline;
+	color:#666;
+}
+
+
+.profile table{
+	border:1px solid #eee;
+	margin:20px 0px 20px 0px;
+	border-collapse:collapse;
+}
+
+.profile tr{
+	height:40px;
+}
+
+.profile td{
+	border-top:1px solid #eee;
+	border-right:1px solid #eee;
+	padding:10px;
+	font-size:12px;
+}
+
+.profile tr:hover{
+	background:#d7e3f4;
+}
+
+.profile a{
+	color:#444;
+}
+
+.profile ul li{
+	line-height:35px;
+}
+
+td.option a{
+	text-decoration:none;
+}

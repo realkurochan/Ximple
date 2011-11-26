@@ -1,0 +1,71 @@
+This file contains TO-DO list for additional procedure by software upgrading.
+
+- Create table translation.
+
+	CREATE TABLE `translation` (
+	  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+	  `status` int(10) unsigned NOT NULL,
+	  `language` varchar(250) DEFAULT NULL,
+	  `module` varchar(250) DEFAULT NULL,
+	  `module_id` int(10) unsigned NOT NULL,
+	  `translation` mediumtext,
+	  PRIMARY KEY (`id`)
+	) CHARACTER SET utf8;
+
+- Set character of table to UTF-8.
+	
+	ALTER TABLE block CHARACTER SET utf8;
+	ALTER TABLE blog CHARACTER SET utf8;
+	ALTER TABLE category CHARACTER SET utf8;
+	ALTER TABLE comment CHARACTER SET utf8;
+	ALTER TABLE contact CHARACTER SET utf8;
+	ALTER TABLE feed CHARACTER SET utf8;
+	ALTER TABLE flashblock CHARACTER SET utf8;
+	ALTER TABLE freetag CHARACTER SET utf8;
+	ALTER TABLE groups CHARACTER SET utf8;
+	ALTER TABLE guestbook CHARACTER SET utf8;
+	ALTER TABLE map CHARACTER SET utf8;
+	ALTER TABLE menu CHARACTER SET utf8;
+	ALTER TABLE message CHARACTER SET utf8;
+	ALTER TABLE note CHARACTER SET utf8;
+	ALTER TABLE profile CHARACTER SET utf8;
+	ALTER TABLE profiletype CHARACTER SET utf8;
+	ALTER TABLE search CHARACTER SET utf8;
+	ALTER TABLE search_source CHARACTER SET utf8;
+	ALTER TABLE section CHARACTER SET utf8;
+	ALTER TABLE translation CHARACTER SET utf8;
+	ALTER TABLE users CHARACTER SET utf8;
+
+- Alter table search_source.
+	
+	ALTER TABLE search_source ADD `language` varchar(250) DEFAULT NULL;
+
+- Alter table content
+	
+	ALTER TABLE blog MODIFY comment_time TIMESTAMP DEFAULT '0000-00-00';
+	ALTER TABLE page MODIFY comment_time TIMESTAMP DEFAULT '0000-00-00';
+
+- Alter table profiletype
+	
+	ALTER TABLE profiletype ADD `allowed_group` text;
+
+- Alter table forum
+	
+	ALTER TABLE forum CHANGE allowed_group writable_group text;
+	ALTER TABLE forum ADD readable_group text;
+	ALTER TABLE forum ADD publishable_group text;
+	ALTER TABLE forum DROP guest_postable;
+
+- ALTER TABLE feed ADD section int;
+
+- ALTER TABLE block RENAME widget;
+
+- ALTER TABLE flashblock RENAME flashwidget;
+
+- ALTER TABLE menu CHANGE block widget int;
+
+- ALTER TABLE section ADD `uri` VARCHAR(250);
+
+- define('SECTION_PATH', dirname(__FILE__));
+
+

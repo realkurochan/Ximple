@@ -1,0 +1,25 @@
+# Ximple Terminology
+
+- ximple_mode
+
+- Admin-Role
+
+- Role
+
+- Group
+
+- Group-ID
+
+- User
+
+- User-ID
+
+- Guest
+
+- Module
+
+- Owner
+
+- CRUD
+
+- Role-System

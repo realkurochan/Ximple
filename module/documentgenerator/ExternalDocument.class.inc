@@ -1,0 +1,20 @@
+<?php
+execute_add_extended_class('documentgenerator', 'externaldocument', 'ExternalDocument');
+include_once('DocumentGenerator.class.inc');
+include('ExternalDocumentModel.class.inc');
+
+class ExternalDocument extends DocumentGenerator{
+	function ExternalDocument(){
+		$this->moduleTitle = tt('ExternalDocument');
+		$this->moduleName = 'documentgenerator';
+		$this->moduleExtension = 'externaldocument';
+		$this->tableName = 'documentgenerator_externaldocument';
+		$this->listLabel = tt('List of My ExternalDocument');
+		$this->init(new ExternalDocumentModel());
+		$this->setAccess();
+		$this->setAction();
+		document_set_path(tt('Document Generator'), $this->moduleName);
+		document_set_path($this->moduleTitle, $this->fullModuleName);
+	}
+}
+?>

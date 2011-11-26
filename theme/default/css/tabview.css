@@ -1,0 +1,38 @@
+.tab_nav{
+	margin-bottom:15px;
+	padding:0px;
+	line-height:37px;
+}
+
+.tab_nav ul{
+	padding:0px;
+	margin:5px 0px 2px 0px;
+	border-bottom:1px solid #bbb;
+	line-height:29px;
+}
+
+.tab_item, .tab_selected{
+	margin:0px 15px;
+	display:inline;
+	border-top:1px solid #bbb;
+	border-left:1px solid #bbb;
+	border-right:1px solid #bbb;
+	padding:6px 15px 7px 15px;
+}
+
+.tab_item{
+	background:#eee;
+}
+
+.tab_item a, .tab_selected a{
+	text-decoration:none;
+	font-style:normal;
+	font-size:12px;
+	padding:0;
+	margin:0;
+}
+
+.tab_selected{
+	border-bottom:1px solid white;
+	background:white;
+}

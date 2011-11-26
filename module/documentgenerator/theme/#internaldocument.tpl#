@@ -1,0 +1,118 @@
+<?php if(!defined('XIMPLE_CMS')) die();?>
+<?php
+	$content1 = 
+			'<?php
+			global $fraction;
+			global $at;
+			global $date;
+			global $subject;
+			global $introduction;
+			global $introduction_detail;
+			global $detail1;
+			global $detail2;
+			global $detail3;
+			global $postscript;
+			global $rank;
+			global $name;
+			global $surname;
+			global $position;
+
+			$fraction = array(99);
+			$at = array(99);
+			$date = array(99);
+			$subject = array(99);
+			$introduction = array(99);
+			$introduction_detail = array(99);
+			$detail1 = array(99);
+			$detail2 = array(99);
+			$detail3 = array(99);
+			$postscript = array(99);
+			$rank = array(99);
+			$name = array(99);
+			$surname = array(99);
+			$position = array(99);
+			?>';
+	$fp = fopen('module/internaldocument/tool/internaldocument_var.php', 'w');
+	fwrite($fp, $content1);
+?>
+<div class="internaldocument">
+	<div id="internaldocument_category_select">
+		<strong><?=tt('InternalDocumentModel Category : ')?></strong>
+		<select id="selected_internaldocument_category" onchange="changeInternalDocumentCategory(this)">
+			<option value="0"><?=tt('Please, select category')?></option>
+			<option value="0"><?=tt('All categories')?></option>					
+			<?php foreach($category as $key => $value) :?>
+				<option value="<?=$key?>"><?=$value?></option>
+			<?php endforeach?>
+		</select>
+	</div>
+	<?=$write_icon?>
+	<?php foreach($data as $cid => $government_fractions) :?>
+	<div class="internaldocument_container" id="internaldocument_<?=$cid?>">
+		<h3 class="list_label"><?=$category[$cid]?></h3>
+		<?php foreach($government_fractions as $key => $value) :?>
+			<h3 class="title_label"> ส่วนราชการ : <?=$value['government_fraction']?> </h3>
+			<p><?=$value['id']?> </p>
+			<p>
+			<?php 
+				$id = $value['id'];
+				$fraction = $value['government_fraction'];
+				$at = $value['at'];
+				$date = $value['date'];
+				$subject = $value['subject'];
+				$introduction = $value['introduction'];
+				$introduction_detail = $value['introduction_detail'];
+				$detail1 = $value['detail1'];
+				$detail2 = $value['detail2'];
+				$detail3 = $value['detail3'];
+				$postscript = $value['postscript'];
+				$rank = $value['rank'];
+				$name = $value['name'];
+				$surname = $value['surname'];
+				$position = $value['position'];
+			
+				$content2 = 
+						"<?php
+						\$fraction[$id] = '$fraction';
+						\$at[$id] = '$at';
+						\$date[$id] = '$date';
+						\$subject[$id] = '$subject';
+						\$introduction[$id] = '$introduction';
+						\$introduction_detail[$id] = '$introduction_detail';
+						\$detail1[$id] = '$detail1';
+						\$detail2[$id] = '$detail2';
+						\$detail3[$id] = '$detail3';
+						\$postscript[$id] = '$postscript';
+						\$rank[$id] = '$rank';
+						\$name[$id] = '$name';
+						\$surname[$id] = '$surname';
+						\$position[$id] = '$position';
+						?>";
+				fwrite($fp, $content2);
+			?>
+			<a href="http://localhost/Ximple/module/internaldocument/tool/internaldocument_converter.php?id=<?=$value['id']?>">Create PDF !</a>
+			</p>
+			<p class="operation_bar">
+			<?php if($value['editable']):?>
+				<?=render_operation_link('internaldocument_edit', $key, ('edit'))?>
+				<?=render_operation_link('internaldocument_drop', $key, ('drop'))?>
+			<?php endif?>
+			</p>
+		<?php endforeach?>
+	</div>
+	<?php endforeach?>
+</div>
+<?php
+	fclose($fp);
+?>
+<script>
+	function changeInternalDocumentCategory(category){
+		var cid = $(category).val();
+		if(cid == 0){
+			$('.internaldocument_container').show();
+		}else{
+			$('.internaldocument_container').hide();
+			$('#internaldocument_'+cid).show();
+		}
+	}
+</script>

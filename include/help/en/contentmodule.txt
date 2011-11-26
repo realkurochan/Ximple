@@ -1,0 +1,17 @@
+# Content Module
+
+## What is content module?
+
+- comment
+- category and tags
+- feed
+- permission and publishing mechanism
+- revision system
+
+## What can I do more?
+
+- additional information field
+- own theme
+- additional features
+
+## Write the module

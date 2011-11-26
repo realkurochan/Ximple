@@ -1,0 +1,14 @@
+.forum{
+	margin:0px 0px 50px 0px;
+}
+
+fieldset{
+	border:1px solid #999;
+	margin-bottom:25px;
+}
+
+p.forum_info{
+	color:gray;
+	font-size:11px;
+	margin-bottom:-5px;
+}

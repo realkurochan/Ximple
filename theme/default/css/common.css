@@ -1,0 +1,234 @@
+/* ========= loginform ========= */
+#login_form a{
+	padding:0;
+	margin:0;
+	background:none;
+	display:block;
+}
+
+/* ========= operation bar ========= */
+.operation_bar{
+	border-top:1px solid #ddd;
+	text-align:right;
+}
+
+.operation_bar a, .operation_bar span{
+	text-decoration:none;
+	padding:0px 10px 0px 10px;
+	border-left:1px solid #ddd;
+}
+
+/* ========= calenda ========= */
+
+table.calendar{
+	margin:10px 0px 10px 20px;
+	border-collapse:collapse;
+}
+
+table.calendar td{
+	font-size:10px;
+	padding:2px;
+	border:1px solid gray;
+}
+
+table.calendar td a{
+	font-size:10px;
+	margin:0px;
+	display:inline;
+}
+
+/* ========= quote and code ========= */
+.keyword{
+	background:yellow;
+	padding:3px 5px;
+}
+
+blockquote{
+	margin:10px;
+	padding:20px;
+	background-color: #ffffee;
+	background: url(../image/quote.png) no-repeat top left;
+	border:1px solid #fbda51;
+}
+
+div.code{
+	margin:10px;
+	padding:20px;
+	background: url(../image/quote.png) no-repeat top left;
+	background-color: #ffffee;
+	border:1px solid #fbda51;
+	width:480px;
+	height:auto;
+	overflow: scroll;
+}
+
+
+div.plaincode{
+	margin:10px;
+	padding:20px;
+	background: url(../image/quote.png) no-repeat top left;
+	background-color: #ffffee;
+	border:1px solid #fbda51;
+	width:480px;
+}
+
+/* ========= revision ========= */
+
+.revision{
+	margin:5px 0px 5px 0px;
+	padding:5px;
+	background-color: #ffffee;
+	border:1px solid #fbda51;
+	width:auto;
+	height:auto;
+}
+
+.revision_unfilter{
+	margin:5px 0px 5px 0px;
+	padding:5px;
+	background-color: #eeffee;
+	border:1px solid #8afb51;
+	width:auto;
+	height:auto;
+}
+
+del{
+	background:#ff8888;
+	text-decoration:underline;
+}
+
+ins{
+	background:#88ff88;
+	text-decoration:underline;
+}
+
+/* ========= antispam ========= */
+
+#antikey_pre_form a{
+	padding:10px 0px 10px 0px;
+	font-size:18px;
+	font-weight:bold;
+	border-bottom:1px solid rgb(90%,90%,90%);
+	text-decoration:underline;
+	color:rgb(25%,25%,25%);
+	display:block;
+}
+
+#antikey_pre_form{
+	
+}
+
+/* ========= Notification ========= */
+#notify_check{
+	position:fixed;
+	top:100px;
+	left:100px;
+}
+
+#notify_widget{
+	width:35px;
+	height:33px;
+	padding-top:4px;
+	padding-left:0px;
+	background:url(../image/notify.png) 2px 2px no-repeat;
+}
+
+#notify_check a{
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.notify{
+	padding:10px 10px 5px 10px;
+	margin-bottom:15px;
+	text-align:left;
+	-moz-border-radius: 8px;
+	border-radius:8px;
+}
+
+.notify img{
+	margin-right:15px;
+}
+
+#notify_info{
+	border:1px solid #25a;
+	background:#d7e3f4;
+}
+
+#notify_info h4{
+	color:#25a;
+}
+
+#notify_tip{
+	border:1px solid #490;
+	background:#efe;
+}
+
+#notify_tip h4{
+	color:#490;
+}
+
+#notify_warning{
+	border:1px solid #fc0;
+	background:#ffe;
+}
+
+#notify_warning h4{
+	color:#a80;
+}
+
+#notify_error{
+	border:1px solid #d40;
+	background:#fdd;
+}
+
+#notify_error h4{
+	color:#d40;
+}
+
+/* ========= Write icon ========= */
+.write_icon{
+	font-weight:bold;
+	text-decoration:none;
+	line-height:32px;
+	display:block;
+}
+
+.write_icon img, .warning_icon{
+	margin-right:5px;
+}
+
+/* ========= Translate Widget ========= */
+.translate_widget a{
+	margin-left:5px;
+}
+
+.signature{
+	margin-top:-10px;
+	font-size:11px;
+	color:#666;
+}
+
+/* ========= Avatar ========= */
+.avatar_container{
+	text-align:center;
+	padding:10px;
+	margin:1px;
+}
+
+.avatar_container:hover{
+	border:1px solid #ddd;
+	margin:0;
+}
+
+.avatar_icon_container{
+	min-width:96px;
+	height:24px;
+}
+
+.avatar_icon{
+	padding:3px;
+	margin:0;
+	display:none;
+}

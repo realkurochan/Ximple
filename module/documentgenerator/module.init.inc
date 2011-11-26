@@ -1,0 +1,92 @@
+<?php
+	function module_get_info_documentgenerator(){
+		return array(
+			'name' => tt('Document Generator'),
+			'description' => tt('Make an document from template here.')
+		);
+	}
+     
+	function module_init_documentgenerator(){
+		include_once('AnnounceDocument.class.inc');
+		include_once('CommandDocument.class.inc');
+		include_once('ExternalDocument.class.inc');
+		include_once('InternalDocument.class.inc');
+		include_once(INCLUDE_PATH.'tool/widget.tool.inc');
+		
+		module_add('documentgenerator', 'documentgenerator.module.inc', tt('Document Generator'));
+		
+		$announcedocument = new AnnounceDocument();
+		$announcedocument->initModule('AnnounceDocument.class.inc');
+		
+		$commanddocument = new CommandDocument();
+		$commanddocument->initModule('CommandDocument.class.inc');
+		
+		$externaldocument = new ExternalDocument();
+		$externaldocument->initModule('ExternalDocument.class.inc');
+		
+		$internaldocument = new InternalDocument();
+		$internaldocument->initModule('InternalDocument.class.inc');
+		
+		$admin = new RoleManager('documentgenerator_admin');
+		$admin->setName('DocumentGenerator Administrator');
+		$admin->setDescription('Who can write, edit, drop and Document');
+		$admin->submit();
+	
+		$contributor = new RoleManager('documentgenerator_contributor');
+		$contributor->setName('DocumentGenerator Contributor');
+		$contributor->setDescription('Who can write and edit own Document.');
+		$contributor->submit();
+		
+		$panel = new PanelManager('DocumentGenerator');
+		$panel->appendControl($announcedocument);
+		$panel->appendControl($commanddocument);
+		$panel->appendControl($externaldocument);
+		$panel->appendControl($internaldocument);
+		$panel->appendRole($admin);
+		$panel->appendRole($contributor);
+		$panel->append('documentgenerator_announcedocument_write', 'write new announce document');
+		$panel->append('documentgenerator_announcedocument_contributor_list', 'list my announce documents');
+		$panel->append('documentgenerator_commanddocument_write', 'write new command document');
+		$panel->append('documentgenerator_commanddocument_contributor_list', 'list my command documents');
+		$panel->append('documentgenerator_externaldocument_write', 'write new external document');
+		$panel->append('documentgenerator_externaldocument_contributor_list', 'list my external documents');
+		$panel->append('documentgenerator_internaldocument_write', 'write new internal document');
+		$panel->append('documentgenerator_internaldocument_contributor_list', 'list my internal documents');
+		$panel->submit();
+		
+		notify_add_info(tt('DocumentGenerator has been successfully activated'));
+	}
+
+	function module_drop_documentgenerator(){
+		include_once('AnnounceDocument.class.inc');
+		include_once('CommandDocument.class.inc');
+		include_once('ExternalDocument.class.inc');
+		include_once('InternalDocument.class.inc');
+		include_once(INCLUDE_PATH.'tool/widget.tool.inc');
+		
+		module_drop('documentgenerator');
+		
+		$announcedocument = new AnnounceDocument();
+		$announcedocument->dropModule();
+		
+		$commanddocument = new CommandDocument();
+		$commanddocument->dropModule();
+		
+		$externaldocument = new ExternalDocument();
+		$externaldocument->dropModule();
+		
+		$internaldocument = new InternalDocument();
+		$internaldocument->dropModule();
+		
+		$admin = new RoleManager('documentgenerator_admin');
+		$admin->drop();
+		
+		$contributor = new RoleManager('documentgenerator_contributor');
+		$contributor->drop();
+		
+		$panel = new PanelManager('DocumentGenerator');
+		$panel->drop();
+		
+		notify_add_info(tt('DocumentGenerator has been successfully deactivated'));
+	}
+?>

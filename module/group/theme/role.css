@@ -1,0 +1,40 @@
+#role_user_list{
+	background:#eee;
+	margin:20px auto 20px auto;
+}
+
+#role_user_list ul{
+	list-style-type: none;
+	padding:2px 10px 2px 10px;
+	margin:0 0 20px 0;
+	min-height:25px;
+}
+
+#role_user_list ul li{
+	margin:8px auto 8px 15px;
+	padding:2px 15px 2px 15px;
+	border:1px solid #aaa;
+	background:#fff;
+	float:left;
+	width:220px;
+}
+
+#role_user_list ul li#holder{
+	clear:both;
+	border:none;
+	height:0px;
+	width:auto;
+	background:#eee;
+	float:none;
+	margin:0;
+	padding:0;
+}
+
+#role_user_list ul li img{
+	margin-right:15px;
+}
+
+.system_role{
+	background:#fdd;
+	color:#222;
+}

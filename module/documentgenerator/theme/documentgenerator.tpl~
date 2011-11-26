@@ -1,0 +1,268 @@
+<?php
+$i = 0;
+$internal_id = array();
+foreach($internaldocument as $key => $value):
+	$i = $i+1;
+	$internal_id[$i] = $value['id'];
+endforeach;
+echo count($internal_id);
+?>
+<h3 class="title_label"><?=tt('Announce Document')?></h3>
+<table width="100%">
+	<tr>
+		<td>	
+			<a href=<?=SECTION_URI.Q.'documentgenerator_announcedocument_write'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/add.png" border="0" >
+				Write new Document
+			</a>
+		</td>
+		<td>
+			<a href=<?=SECTION_URI.Q.'documentgenerator_announcedocument_contributor_list'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/folder.png" border="0" >
+				List all Documents
+			</a>
+		</td>
+	</tr>	
+</table>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tbody align="center">
+	<tr>
+		<th style="min-width:100px;">
+			เรื่อง
+		</th>
+		<th colspan="6">
+			operation
+		</th>
+	</tr>
+	<?php foreach($announcedocument as $key => $value):?>
+	<tr>
+		<td align="left">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument/<?=$value['id']?>"><?=$value['subject']?></a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_preview/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/module/documentgenerator/theme/preview.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_genpdf/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/files/icon/pdf.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_genodt/<?=$value['id']?>/">
+			<img alt="generate ODT" src="http://localhost/ximple/module/documentgenerator/theme/odt.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_gendoc/<?=$value['id']?>/">
+			<img alt="generate DOC" src="http://localhost/ximple/files/icon/word.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_edit/<?=$value['id']?>/">
+			<img alt="edit" src="http://localhost/ximple/files/icon/edit.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_announcedocument_drop/<?=$value['id']?>/">
+			<img alt="drop" src="http://localhost/ximple/files/icon/drop.png" border="0"/>
+			</a>
+		</td>
+	</tr>
+	<?php endforeach?>
+</tbody></table><br><br>
+
+<h3 class="title_label"><?=tt('Command Document')?></h3>
+<table width="100%">
+	<tr>
+		<td>	
+			<a href=<?=SECTION_URI.Q.'documentgenerator_commanddocument_write'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/add.png" border="0" >
+				Write new Document
+			</a>
+		</td>
+		<td>
+			<a href=<?=SECTION_URI.Q.'documentgenerator_commanddocument_contributor_list'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/folder.png" border="0" >
+				List all Documents
+			</a>
+		</td>
+	</tr>	
+</table>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tbody align="center">
+	<tr>
+		<th style="min-width:100px;">
+			เรื่อง
+		</th>
+		<th colspan="6">
+			operation
+		</th>
+	</tr>
+	<?php foreach($commanddocument as $key => $value):?>
+	<tr>
+		<td align="left">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument/<?=$value['id']?>"><?=$value['subject']?></a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_preview/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/module/documentgenerator/theme/preview.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_genpdf/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/files/icon/pdf.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_genodt/<?=$value['id']?>/">
+			<img alt="generate ODT" src="http://localhost/ximple/module/documentgenerator/theme/odt.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_gendoc/<?=$value['id']?>/">
+			<img alt="generate DOC" src="http://localhost/ximple/files/icon/word.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_edit/<?=$value['id']?>/">
+			<img alt="edit" src="http://localhost/ximple/files/icon/edit.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_commanddocument_drop/<?=$value['id']?>/">
+			<img alt="drop" src="http://localhost/ximple/files/icon/drop.png" border="0"/>
+			</a>
+		</td>
+	</tr>
+	<?php endforeach?>
+</tbody></table><br><br>
+
+<h3 class="title_label"><?=tt('External Document')?></h3>
+<table width="100%">
+	<tr>
+		<td>	
+			<a href=<?=SECTION_URI.Q.'documentgenerator_externaldocument_write'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/add.png" border="0" >
+				Write new Document
+			</a>
+		</td>
+		<td>
+			<a href=<?=SECTION_URI.Q.'documentgenerator_externaldocument_contributor_list'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/folder.png" border="0" >
+				List all Documents
+			</a>
+		</td>
+	</tr>	
+</table>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tbody align="center">
+	<tr>
+		<th style="min-width:100px;">
+			เรื่อง
+		</th>
+		<th colspan="6">
+			operation
+		</th>
+	</tr>
+	<?php foreach($externaldocument as $key => $value):?>
+	<tr>
+		<td align="left">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument/<?=$value['id']?>"><?=$value['subject']?></a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_preview/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/module/documentgenerator/theme/preview.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_genpdf/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/files/icon/pdf.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_genodt/<?=$value['id']?>/">
+			<img alt="generate ODT" src="http://localhost/ximple/module/documentgenerator/theme/odt.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_gendoc/<?=$value['id']?>/">
+			<img alt="generate DOC" src="http://localhost/ximple/files/icon/word.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_edit/<?=$value['id']?>/">
+			<img alt="edit" src="http://localhost/ximple/files/icon/edit.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_externaldocument_drop/<?=$value['id']?>/">
+			<img alt="drop" src="http://localhost/ximple/files/icon/drop.png" border="0"/>
+			</a>
+		</td>
+	</tr>
+	<?php endforeach?>
+</tbody></table><br><br>
+
+<h3 class="title_label"><?=tt('Internal Document')?></h3>
+<table width="100%">
+	<tr>
+		<td>	
+			<a href=<?=SECTION_URI.Q.'documentgenerator_internaldocument_write'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/add.png" border="0" >
+				Write new Document
+			</a>
+		</td>
+		<td>
+			<a href=<?=SECTION_URI.Q.'documentgenerator_internaldocument_contributor_list'?> class="write_icon">
+				<img src="http://localhost/ximple/files/icon/folder.png" border="0" >
+				List all Documents
+			</a>
+		</td>
+	</tr>	
+</table>
+<table width="100%" border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;"><tbody align="center">
+	<tr>
+		<th style="min-width:100px;">
+			เรื่อง
+		</th>
+		<th colspan="6">
+			operation
+		</th>
+	</tr>
+	<?php foreach($internaldocument as $key => $value):?>
+	<tr>
+		<td align="left">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument/<?=$value['id']?>"><?=$value['subject']?></a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_preview/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/module/documentgenerator/theme/preview.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_genpdf/<?=$value['id']?>/">
+			<img alt="generate PDF" src="http://localhost/ximple/files/icon/pdf.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_genodt/<?=$value['id']?>/">
+			<img alt="generate ODT" src="http://localhost/ximple/module/documentgenerator/theme/odt.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_gendoc/<?=$value['id']?>/">
+			<img alt="generate DOC" src="http://localhost/ximple/files/icon/word.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_edit/<?=$value['id']?>/">
+			<img alt="edit" src="http://localhost/ximple/files/icon/edit.png" border="0"/>
+			</a>
+		</td>
+		<td style="width:20px;">
+			<a href="http://localhost/ximple/?/documentgenerator_internaldocument_drop/<?=$value['id']?>/">
+			<img alt="drop" src="http://localhost/ximple/files/icon/drop.png" border="0"/>
+			</a>
+		</td>
+	</tr>
+	<?php endforeach?>
+</tbody></table>
